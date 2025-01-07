@@ -16,9 +16,19 @@ function getComputerChoice() {
     }
 }
 
-console.log(getComputerChoice());
-console.log(getComputerChoice());
-console.log(getComputerChoice());
-console.log(getComputerChoice());
-console.log(getComputerChoice());
-console.log(getComputerChoice());
+function getHumanChoice() {
+    let hasValue = false;
+    while (hasValue === false) {
+        let choice = prompt(`Type "Rock", "Paper", or "Scissors".`);
+        choice = choice.toLowerCase();
+        if (choice === "rock" || choice === "paper" || choice === "scissors") {
+            hasValue = true;
+            return choice;
+        }
+        else {
+            alert(`Invalid option. Please select "Rock", "Paper", or "Scissors".`);
+        }
+    }
+}
+
+console.log(getHumanChoice());
